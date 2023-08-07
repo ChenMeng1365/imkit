@@ -1,0 +1,27 @@
+{
+	"reqType":0,
+    "perception": {
+        "inputText": {
+            "text": "((text))"
+        },
+        "inputImage": {
+            "url": "((imageurl))"
+        },
+        "inputMedia": {
+            "url": "((mediaurl))"
+        },
+        "selfInfo": {
+            "location": {
+                "city": "((city))",
+                "province": "((province))",
+                "street": "((street))"
+            }
+        }
+    },
+    "userInfo": {
+        "apiKey": "((apiKey))",
+        "userId": "((userId))",
+        "groupId": "((groupId))",
+        "userIdName": "((userIdName))"
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"reqType":0,
+    "perception": {
+        "inputImage": {
+            "url": "((imageUrl))"
+        }
+    },
+    "userInfo": {
+        "apiKey": "((apiKey))",
+        "userId": "((userId))"
+    }
+}

@@ -1,0 +1,25 @@
+<% header = {"Content-Type"=>env["CONTENT_TYPE"],"timestamp"=>env["HTTP_TIMESTAMP"],"sign"=>env["HTTP_SIGN"]} %>
+<% bot = $config["dtbot"].find{|bot|bot['Name']=='Rubot'} %>
+<% check_sign = DTHelper.verify_sign(bot['AppSecret'], header['timestamp'])==header['sign'] %>
+<% check_time = DTHelper.verify_time header['timestamp'] %>
+<% # File.write "#{$data}/dingtalk/debug-request.log", JSON.pretty_generate( [header, check_sign, check_time]) %>
+
+<% msg = JSON.parse(request.env['rack.input'].read) %>
+<% File.open( "#{$data}/dingtalk/outgoing-messages-#{Time.new.strftime("%Y%m%d%H")}.json","a+"){|file|file.write "\n<message>\n"+JSON.pretty_generate(msg)+"\n</message>\n"} %>
+
+<% reply = DTTalk.repeat msg["text"]["content"] %>
+<%= %Q{
+{
+     "msgtype": "text",
+     "text": {
+         "content": "#{reply}"
+     },
+     "at": {
+         "atMobiles": [
+             
+         ], 
+         "isAtAll": false
+     }
+}
+} if check_sign %>
+

@@ -1,0 +1,12 @@
+{
+	"reqType":0,
+    "perception": {
+        "inputText": {
+            "text": "((text))"
+        }
+    },
+    "userInfo": {
+        "apiKey": "((apiKey))",
+        "userId": "((userId))"
+    }
+}

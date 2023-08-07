@@ -1,0 +1,8 @@
+--- # webhook
+
+## 不同部门和群组对应的access_token并不一样，用以区分
+
+- name: 
+  group: 
+  token: 
+

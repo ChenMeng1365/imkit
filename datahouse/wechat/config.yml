@@ -1,0 +1,21 @@
+--- # wechat configuration
+
+wechat-oa:
+  msg-pusher:
+    url: 
+    token: 
+    encoding-aes-key: 
+    pattern: 
+    msg-type: 
+
+wxwork:
+  app:
+    agentId:  
+    agentName: 
+    corpId: 
+    corpSecret: 
+    access_token: 
+    token:  
+    encodingAESKey: 
+    webhook: 
+

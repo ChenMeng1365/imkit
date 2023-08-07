@@ -1,0 +1,12 @@
+{
+	"reqType":0,
+    "perception": {
+        "inputMedia": {
+            "url": "((mediaurl))"
+        }
+    },
+    "userInfo": {
+        "apiKey": "((apiKey))",
+        "userId": "((userId))"
+    }
+}

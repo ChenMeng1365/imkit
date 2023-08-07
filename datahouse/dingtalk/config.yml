@@ -1,0 +1,37 @@
+--- # dingtalk configuration
+
+general:
+  CorpId: 
+
+dtmp:
+  - Name: 
+    Catagory: 企业内部应用/小程序
+    AgentId: 
+    AppKey: 
+    AppSecret: 
+    ServerIP: 
+    HomeURL: 
+    MngURL: 
+
+
+dtma:
+  - Name: 
+    Catagory: 企业内部应用/H5微应用
+    AgentId: 
+    AppKey: 
+    AppSecret: 
+    ServerIP: 
+    AppURL: 
+    HomeURL: 
+    MngURL: 
+
+
+dtbot:
+  - Name: 
+    Catagory: 企业内部应用/机器人
+    AgentId: 
+    AppKey: 
+    AppSecret: 
+    ServerIP: 
+    MsgURL: 
+    Token: 

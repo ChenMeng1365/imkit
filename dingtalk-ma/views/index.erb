@@ -1,0 +1,32 @@
+<script src="dingtalk.open.js"></script>
+
+<script>
+
+<% code = '1234567890a' # DTHelper.code(11) %>
+
+dd.ready(function() {
+    dd.runtime.permission.requestAuthCode({
+        // corpId: _config.corpId, // 企业id
+        // onSuccess: function (info) {
+        //    code = info.code // 通过该免登授权码可以获取用户身份
+
+        corpId: "<%=$config['general']['CorpId']%>",
+        onSuccess: function(result) {
+            {
+                code: "<%=code%>"
+            }
+        },
+});
+});
+</script>
+
+<% # = request.env["HTTP_X_REAL_IP"] || request.ip %>
+
+<%= code %>
+<% 
+ {
+  'corpId' => $config['general']['CorpId'],
+  'onSuccess' => DTHelper.code(11),
+  'onFail' => 'error'
+}.to_json %>
+
